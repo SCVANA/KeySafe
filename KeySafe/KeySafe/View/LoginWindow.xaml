@@ -17,7 +17,7 @@
                 Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
                 VerticalAlignment="Top"
                 AcceptsReturn="True"
-                materialDesign:HintAssist.Hint="Database"
+                materialDesign:HintAssist.Hint="database"
                 Margin="220,180,296,380" 
                 Height="65"
                 x:Name="database"/>
