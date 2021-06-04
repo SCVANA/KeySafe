@@ -1,0 +1,75 @@
+﻿<Window x:Class="KeySafe.View.DatabaseAddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeySafe.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="DatabaseAddWindow" Height="544.942" Width="701.301" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel>
+            <TextBox
+                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                VerticalAlignment="Top"
+      
+                AcceptsReturn="True"
+                materialDesign:HintAssist.Hint="Titel"
+                Margin="125,30,150,380" 
+                Height="70"
+                x:Name="titel"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBox
+                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                VerticalAlignment="Top"
+                AcceptsReturn="True"
+                materialDesign:HintAssist.Hint="Benutzername"
+                Margin="125,110,150,380" 
+                Height="70"
+                x:Name="benutzername"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBox
+                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                VerticalAlignment="Top"
+                AcceptsReturn="True"
+                materialDesign:HintAssist.Hint="Password"
+                Margin="125,190,150,380" 
+                Height="70"
+                x:Name="TextBoxPassword"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBox
+                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                VerticalAlignment="Top"
+                AcceptsReturn="True"
+                materialDesign:HintAssist.Hint="URL:"
+                Margin="125,270,150,380" 
+                Height="70"
+                x:Name="url"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBox
+                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                VerticalAlignment="Top"
+                AcceptsReturn="True"
+                materialDesign:HintAssist.Hint="Notizen"
+                Margin="125,350,0,380" 
+                Height="70"
+                x:Name="notizen" HorizontalAlignment="Left" Width="421"/>
+        </StackPanel>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedButton}"
+            ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Margin="156,434,182,10" Height="Auto" 
+            FontSize="36" Foreground="White" materialDesign:ShadowAssist.ShadowDepth="Depth2" Click="Button_Click_1" >
+            Setup new Key
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedButton}"
+            ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Margin="551,205,10,266" Height="Auto" 
+            FontSize="10" Foreground="White" materialDesign:ShadowAssist.ShadowDepth="Depth2" Click="PwdGenBtn_CLick" >
+            generate password
+        </Button>
+    </Grid>
+</Window>
