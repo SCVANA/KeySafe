@@ -3,9 +3,6 @@ using KeySafe.Service;
 
 namespace KeySafe.View
 {
-    /// <summary>
-    /// Interaktionslogik für RegisteryWindow.xaml
-    /// </summary>
     public partial class RegisteryWindow : Window
     {
         public RegisteryWindow()
@@ -13,7 +10,7 @@ namespace KeySafe.View
             InitializeComponent();
         }
 
-        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
@@ -22,29 +19,25 @@ namespace KeySafe.View
 
         private void GetDBBtn_Click(object sender, RoutedEventArgs e)
         {
-            // Create a "Save As" dialog for selecting a directory (HACK)
             var dialog = new Microsoft.Win32.SaveFileDialog();
-            dialog.InitialDirectory = @"c:\"; // Use current value for initial dir
-            dialog.Title = "Select a Directory"; // instead of default "Save As"
-            dialog.Filter = "Directory|*.this.directory"; // Prevents displaying files
-            dialog.FileName = "select"; // Filename will then be "select.this.directory"
+            dialog.InitialDirectory = @"c:\";
+            dialog.Title = "Select a Directory";
+            dialog.Filter = "Directory|*.this.directory";
+            dialog.FileName = "select";
             if (dialog.ShowDialog() == true)
             {
                 string path = dialog.FileName;
-                // Remove fake filename from resulting path
                 path = path.Replace("\\select.this.directory", "");
                 path = path.Replace(".this.directory", "");
-                // If user has changed the filename, create the new directory
                 if (!System.IO.Directory.Exists(path))
                 {
                     System.IO.Directory.CreateDirectory(path);
                 }
-                // Our final value is in path
                 database.Text = path;
             }
         }
 
-        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
             if(passwordOne.Password == passwordTwo.Password && !string.IsNullOrEmpty(passwordOne.Password) && !string.IsNullOrEmpty(passwordTwo.Password) && !string.IsNullOrWhiteSpace(database.Text))
             {

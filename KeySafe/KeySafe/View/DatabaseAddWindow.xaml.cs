@@ -6,19 +6,17 @@ using System.Collections.Generic;
 
 namespace KeySafe.View
 {
-    /// <summary>
-    /// Interaktionslogik für DatabaseAddWindow.xaml
-    /// </summary>
     public partial class DatabaseAddWindow : Window
 	{
-		private SqliteConnectionService sqliteConnectionService;
-		private int directoryId;
-		private ListView listViewKey;
+		private SqliteConnectionService _sqliteConnectionService;
+		private int _directoryId;
+		private ListView _listViewKey;
+
 		public DatabaseAddWindow(SqliteConnectionService sqliteConnectionService, string directoryName, ListView listViewKey)
 		{
-			this.sqliteConnectionService = sqliteConnectionService;
-			this.directoryId = sqliteConnectionService.GetKeyDirectoryID(directoryName).Value;
-			this.listViewKey = listViewKey;
+			_sqliteConnectionService = sqliteConnectionService;
+			_directoryId = sqliteConnectionService.GetKeyDirectoryID(directoryName).Value;
+			_listViewKey = listViewKey;
 			InitializeComponent();
 		}
 
@@ -30,7 +28,7 @@ namespace KeySafe.View
 			TextBoxPassword.Text = passwordGenerator.GeneratePassword();		
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void setupBtn_Click(object sender, RoutedEventArgs e)
         {	
 			Model.Key key = new Model.Key();
 			key.Title = titel.Text;
@@ -38,14 +36,14 @@ namespace KeySafe.View
 			key.Password = TextBoxPassword.Text;
 			key.Url = url.Text;
 			key.Notes = notizen.Text;
-			key.DirectoryID = directoryId;
-			sqliteConnectionService.SetKey(key);
+			key.DirectoryID = _directoryId;
+			_sqliteConnectionService.SetKey(key);
 
-			List<Model.Key> keys = sqliteConnectionService.GetKeys(directoryId);
+			List<Model.Key> keys = _sqliteConnectionService.GetKeys(_directoryId);
 
-			listViewKey.ItemsSource = keys;
+			_listViewKey.ItemsSource = keys;
 
-			this.Close();
+			Close();
 		}
     }
 }

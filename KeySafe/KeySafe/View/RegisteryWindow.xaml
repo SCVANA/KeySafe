@@ -17,7 +17,7 @@
                 Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
                 VerticalAlignment="Top"
                 AcceptsReturn="True"
-                materialDesign:HintAssist.Hint="Database Ablegeort"
+                materialDesign:HintAssist.Hint="Database directory"
                 Margin="220,180,306,380" 
                 Height="65"
                 x:Name="database"/>
@@ -27,7 +27,7 @@
             <PasswordBox
                 Style="{StaticResource MaterialDesignFilledPasswordFieldPasswordBox}"
                 VerticalAlignment="Top"
-                materialDesign:HintAssist.Hint="Password" 
+                materialDesign:HintAssist.Hint="password" 
                 Margin="220,260,220,280" 
                 Height="65" 
                 x:Name="passwordOne"/>
@@ -36,7 +36,7 @@
             <PasswordBox
                 Style="{StaticResource MaterialDesignFilledPasswordFieldPasswordBox}"
                 VerticalAlignment="Top"
-                materialDesign:HintAssist.Hint="Confirm Password" 
+                materialDesign:HintAssist.Hint="Confirm password" 
                 Margin="220,340,220,280" 
                 Height="65" 
                 x:Name="passwordTwo"/>
@@ -44,12 +44,12 @@
         <Button x:Name="ButtonLogin"
             Style="{StaticResource MaterialDesignRaisedButton}"
             ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Margin="222,463,218,178" Height="Auto" 
-            FontSize="36" Foreground="White" materialDesign:ShadowAssist.ShadowDepth="Depth2" Click="ButtonLogin_Click">
-            Login Erstellen
+            FontSize="36" Foreground="White" materialDesign:ShadowAssist.ShadowDepth="Depth2" Click="LoginBtn_Click">
+            create login
         </Button>
         <Button x:Name="ButtonBack"
             Style="{StaticResource MaterialDesignFlatButton}"
-            ToolTip="MaterialDesignFlatButton" Margin="310,570,310,90" Click="ButtonBack_Click">
+            ToolTip="MaterialDesignFlatButton" Margin="310,570,310,90" Click="BackBtn_Click">
             Back to login
         </Button>
         <Label Content="Key" Margin="303,90,357,570" VerticalContentAlignment="Center"

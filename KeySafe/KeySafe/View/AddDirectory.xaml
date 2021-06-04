@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeySafe.View"
         mc:Ignorable="d"
-        Title="Ordner Hinzufügen" Height="122.255" Width="477.457" WindowStyle="ToolWindow">
+        Title="add folder" Height="122.255" Width="477.457" WindowStyle="ToolWindow">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="71*"/>
             <ColumnDefinition Width="450*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="265,35,0,0" Grid.Column="1" Click="Button_Click"/>
+        <Button Content="add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="265,35,0,0" Grid.Column="1" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" Name="TextBoxDirectoryName" VerticalAlignment="Top" Width="290" Margin="22,35,0,0" Grid.ColumnSpan="2"/>
 
     </Grid>

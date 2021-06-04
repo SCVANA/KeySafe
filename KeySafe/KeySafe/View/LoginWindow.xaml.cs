@@ -1,14 +1,10 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Windows;
-using KeySafe.View;
 using KeySafe.Service;
 
 namespace KeySafe.View
 {
-    /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
-    /// </summary>
     public partial class LoginWindow : Window
     {
         public LoginWindow()
@@ -33,7 +29,6 @@ namespace KeySafe.View
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            //TODO Checken ob datenbank und password stimmen und vorhanden sind
             SqliteConnectionService sqliteConnectionService = new SqliteConnectionService(database.Text, passwordns.Password.ToString());
 
             MenuWindow menuWindow = new MenuWindow(sqliteConnectionService);
@@ -49,10 +44,6 @@ namespace KeySafe.View
             this.Close();
         }
 
-        /// <summary>
-        /// Setzt den PFad der DB
-        /// </summary>
-        /// <param name="path">Ordner Pfad</param>
         public void setDBPath(string path)
         {
             database.Text = $"{path}\\KeySafeDB.db";

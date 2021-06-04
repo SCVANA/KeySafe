@@ -14,7 +14,7 @@
                 VerticalAlignment="Top"
       
                 AcceptsReturn="True"
-                materialDesign:HintAssist.Hint="Titel"
+                materialDesign:HintAssist.Hint="title"
                 Margin="125,30,150,380" 
                 Height="70"
                 x:Name="titel"/>
@@ -24,7 +24,7 @@
                 Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
                 VerticalAlignment="Top"
                 AcceptsReturn="True"
-                materialDesign:HintAssist.Hint="Benutzername"
+                materialDesign:HintAssist.Hint="username"
                 Margin="125,110,150,380" 
                 Height="70"
                 x:Name="benutzername"/>
@@ -34,7 +34,7 @@
                 Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
                 VerticalAlignment="Top"
                 AcceptsReturn="True"
-                materialDesign:HintAssist.Hint="Password"
+                materialDesign:HintAssist.Hint="password"
                 Margin="125,190,150,380" 
                 Height="70"
                 x:Name="TextBoxPassword"/>
@@ -54,7 +54,7 @@
                 Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
                 VerticalAlignment="Top"
                 AcceptsReturn="True"
-                materialDesign:HintAssist.Hint="Notizen"
+                materialDesign:HintAssist.Hint="notes"
                 Margin="125,350,0,380" 
                 Height="70"
                 x:Name="notizen" HorizontalAlignment="Left" Width="421"/>
@@ -62,7 +62,7 @@
         <Button
             Style="{StaticResource MaterialDesignRaisedButton}"
             ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Margin="156,434,182,10" Height="Auto" 
-            FontSize="36" Foreground="White" materialDesign:ShadowAssist.ShadowDepth="Depth2" Click="Button_Click_1" >
+            FontSize="36" Foreground="White" materialDesign:ShadowAssist.ShadowDepth="Depth2" Click="setupBtn_Click" >
             Setup new Key
         </Button>
         <Button

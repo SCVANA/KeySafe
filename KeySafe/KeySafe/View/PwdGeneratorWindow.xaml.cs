@@ -14,17 +14,12 @@ using System.Windows.Shapes;
 
 namespace KeySafe.View
 {
-    /// <summary>
-    /// Interaction logic for PwdGeneratorWindow.xaml
-    /// </summary>
     public partial class PwdGeneratorWindow : Window
     {
         public PwdGeneratorWindow()
         {
             InitializeComponent();
         }
-
-
         public List<bool> getPwd()
         {
             List<bool> pwdConfig = new List<bool>();
@@ -36,12 +31,9 @@ namespace KeySafe.View
             pwdConfig.Add(wishes.IsChecked == true ? true : false);
             return pwdConfig; 
         }
-
         private void acceptBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
-     
     }
 }

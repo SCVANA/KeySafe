@@ -9,11 +9,11 @@
     <Grid>
         <Grid Margin="10,100,600,10">
             <GroupBox
-                Header="Ordner"
+                Header="Folder"
                 Style="{DynamicResource MaterialDesignGroupBox}"
                 materialDesign:ShadowAssist.ShadowDepth="Depth3"
                 BorderThickness="0"/>
-            <TreeView  Margin="0,35,0,0" Name="KeyDirectoryTree" MouseRightButtonDown="MouseRightButtonDownTreeView" PreviewMouseLeftButtonUp="MousLeftUp">
+            <TreeView  Margin="0,35,0,0" Name="KeyDirectoryTree" MouseRightButtonDown="MouseRightButtonDownTreeView" PreviewMouseLeftButtonUp="MouseLeftUp">
                 <TreeView.ContextMenu>
                     <ContextMenu>
                         <MenuItem Header="Ordner Hinzufügen" Name="AddDirectory" Click="Click_ContextMenu" />
@@ -53,19 +53,19 @@
                     <GridView>
                         <GridViewColumn
                             DisplayMemberBinding="{Binding Title}"
-                            Header="Titel" Width="100"/>
+                            Header="title" Width="100"/>
                         <GridViewColumn
                             DisplayMemberBinding="{Binding Username}"
-                            Header="Benutzername" Width="150"/>
+                            Header="username" Width="150"/>
                         <GridViewColumn
                             DisplayMemberBinding="{Binding Password}"
-                            Header="Passwort" Width="100"/>
+                            Header="password" Width="100"/>
                         <GridViewColumn
                             DisplayMemberBinding="{Binding Url}"
                             Header="URL" Width="100"/>
                         <GridViewColumn
                             DisplayMemberBinding="{Binding Notes}"
-                            Header="Notizen" Width="100"/>
+                            Header="notes" Width="100"/>
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -91,13 +91,13 @@
             </Button>
             <Button
                 Style="{StaticResource MaterialDesignIconButton}"
-                ToolTip="MaterialDesignIconButton" Margin="530,0,190,30"  Height="40" Width="40" Click="Button_Click">
+                ToolTip="MaterialDesignIconButton" Margin="530,0,190,30"  Height="40" Width="40" Click="AddBtn_Click">
                 <materialDesign:PackIcon
                     Kind="Plus" />
             </Button>
             <Button
                 Style="{StaticResource MaterialDesignIconButton}"
-                ToolTip="MaterialDesignIconButton"  Height="40" Width="40" Margin="484,0,240,30" Click="Button_Click_1">
+                ToolTip="MaterialDesignIconButton"  Height="40" Width="40" Margin="484,0,240,30" Click="DeleteBtn_Click">
                 <materialDesign:PackIcon
                     Kind="Minus" />
             </Button>
