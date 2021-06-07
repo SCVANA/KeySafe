@@ -24,7 +24,7 @@ namespace KeySafe.View
         {
 			PwdGeneratorWindow pwdGenerator = new PwdGeneratorWindow();
 			pwdGenerator.Show();
-			PasswordGenerator passwordGenerator = new PasswordGenerator(pwdGenerator.getPwd(), "", "13");
+			PasswordGenerator passwordGenerator = new PasswordGenerator();
 			TextBoxPassword.Text = passwordGenerator.GeneratePassword();		
         }
 

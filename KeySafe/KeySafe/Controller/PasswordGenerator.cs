@@ -28,7 +28,7 @@ namespace KeySafe.Controller
         /// <param name="wishDefinitelyUse">Alle Zeichenwuensche im Passwort verwenden</param>
         /// <param name="specialWishes">Speziele Zeichenwuensche</param>
         /// <param name="passwordLength">Passwort laenge</param>
-        public PasswordGenerator(bool? lowerCase, bool? upperCase, bool? specialCharacters, bool? spaces, bool? numbers, bool? wishDefinitelyUse, string specialWishes, string passwordLength)
+        public PasswordGenerator(bool? lowerCase = null, bool? upperCase = null, bool? specialCharacters = null, bool? spaces = null, bool? numbers = null, bool? wishDefinitelyUse = null, string specialWishes = null, string passwordLength = null)
         {
             if (lowerCase ?? false)
             {

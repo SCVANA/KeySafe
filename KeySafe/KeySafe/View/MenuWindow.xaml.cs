@@ -14,6 +14,8 @@ namespace KeySafe.View
 		private SqliteConnectionService _sqlConnectionService;
         private DirectoryController _directoryController;
         private TreeViewItem _selected;
+        private string _selectedItemstring = null;
+
 
         public MenuWindow(SqliteConnectionService sqlConnectionService)
 		{
@@ -86,8 +88,9 @@ namespace KeySafe.View
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
+
 			var selectedItem = KeyDirectoryTree.SelectedItem as TreeViewItem;
-			string selectedItemstring = KeyDirectoryTree.SelectedItem.ToString();
+			_selectedItemstring = KeyDirectoryTree.SelectedItem.ToString();
 
 			if (selectedItem != null)
 			{
@@ -100,9 +103,9 @@ namespace KeySafe.View
 			DatabaseAddWindow databaseAddWindow = new DatabaseAddWindow(_sqlConnectionService, itemName, LstViewKeys);
 			databaseAddWindow.Show();
 			}
-			else if(selectedItemstring != null)
+			else if(_selectedItemstring != null)
             {
-				DatabaseAddWindow databaseAddWindow = new DatabaseAddWindow(_sqlConnectionService, selectedItemstring, LstViewKeys);
+				DatabaseAddWindow databaseAddWindow = new DatabaseAddWindow(_sqlConnectionService, _selectedItemstring, LstViewKeys);
 				databaseAddWindow.Show();
 			}
 			else

@@ -42,9 +42,9 @@ namespace KeySafe.View
             if(passwordOne.Password == passwordTwo.Password && !string.IsNullOrEmpty(passwordOne.Password) && !string.IsNullOrEmpty(passwordTwo.Password) && !string.IsNullOrWhiteSpace(database.Text))
             {
                 CreateDB createDB = new CreateDB(database.Text, "KeySafeDB", passwordOne.Password.ToString());
-                LoginWindow loginWindow = new LoginWindow();
-                loginWindow.setDBPath(database.Text);
-                loginWindow.Show();
+                LoginWindow _loginWindow = new LoginWindow();
+                _loginWindow.setDBPath(database.Text);
+                _loginWindow.Show();
                 this.Close();
             }
         }
